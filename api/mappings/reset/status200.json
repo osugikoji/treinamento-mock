@@ -1,0 +1,22 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/user/reset-password",
+        "bodyPatterns": [
+            {
+                "equalToJson": {
+                    "email": "teste@email.com"
+                },
+                "ignoreArrayOrder": true,
+                "ignoreExtraElements": true
+            }
+        ]
+    },
+    "response": {
+        "status": 204,
+        "fixedDelayMilliseconds": 2000,
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/user/sign-in",
+        "bodyPatterns": [
+            {
+                "equalToJson": {
+                    "username": "teste@email.com",
+                    "password": "123456"
+                },
+                "ignoreArrayOrder": true,
+                "ignoreExtraElements": true
+            }
+        ]
+    },
+    "response": {
+        "status": 204,
+        "fixedDelayMilliseconds": 3000,
+        "headers": {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrb2ppMDk3QGdtYWlsLmNvbSIsImlkIjoxLCJleHAiOjExNTg5OTM0NTU0fQ.NPQUzFpGkUEJ0OJi6YdQHvVoJOk9QrZ00pt57GZ24rKwNfYnRJoHq9akg5jCE2wRO20GUSZKEj3bAm0eA_kL_Q"
+        }
+    }
+}

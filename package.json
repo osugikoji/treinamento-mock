@@ -1,0 +1,25 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run serve-wiremock & node server.js",
+    "serve-express": "nodemon ./server.js 0.0.0.0",
+    "serve-wiremock": "wiremock --root-dir ./api --port 7505",
+    "server": "npm run serve-wiremock & PORT=7500 npm run serve-express",
+    "server-win": "npm run serve-wiremock & set PORT=7500 && npm run serve-express"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "express": "^4.17.1",
+    "prettier": "^1.18.2",
+    "request": "^2.88.0",
+    "wiremock": "^2.24.0"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
